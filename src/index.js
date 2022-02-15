@@ -14,7 +14,7 @@ light.add(dlight);
 scene.add(light);
 
 const geometry = new THREE.BoxGeometry(50, 0.1, 50);
-const material = new THREE.MeshPhongMaterial( { color: 0x00ff00 } );
+const material = new THREE.MeshPhongMaterial( { color: 0xffffff } );
 
 const ground = new THREE.Mesh( geometry, material );
 scene.add( ground );
