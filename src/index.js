@@ -7,8 +7,14 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 
+const light = new THREE.AmbientLight(0x404040);
+const dlight = new THREE.DirectionalLight(0xffffff, 0.5);
+
+light.add(dlight);
+scene.add(light);
+
 const geometry = new THREE.BoxGeometry();
-const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+const material = new THREE.MeshPhongMaterial( { color: 0x00ff00 } );
 const cube = new THREE.Mesh( geometry, material );
 scene.add( cube );
 
