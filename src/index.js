@@ -19,8 +19,11 @@ const material = new THREE.MeshPhongMaterial( { color: 0xffffff } );
 const ground = new THREE.Mesh( geometry, material );
 scene.add( ground );
 
-// const cube = new THREE.Mesh( geometry, material );
-// scene.add( cube );
+const cubeGeometry = new THREE.BoxGeometry(2, 2, 2);
+const cubeMaterial = new THREE.MeshPhongMaterial( { color: 0x00ff00 } );
+
+const cube = new THREE.Mesh( cubeGeometry, cubeMaterial );
+scene.add( cube );
 
 camera.position.set(5, 15, 15);
 
